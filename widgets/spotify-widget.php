@@ -67,9 +67,7 @@ class liza_spotify_widg extends Widget_Base {
     protected function render() {
         $settings = $this->get_settings_for_display();
         ?>
-<?php
- echo '<iframe src="'. $settings['spotify_link'] .'" width="' . $settings['liza_width'] .'%" height="' .$settings['liza_height'] .'" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
-?>
+ <iframe src="<?php echo esc_url($settings['spotify_link']); ?>" width=" <?php echo $settings['liza_width'];?>%" height="<?php echo $settings['liza_height']; ?>" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         <?php
     }
 
